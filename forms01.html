@@ -16,16 +16,156 @@
     <main>
         <fieldset>
             <legend>1.identificação</legend>
-            <br>
+
             <form ID="inscrição jogos" action="/iscrição jogos" method="post" enctype="multipart/form-data">
                 <label for="nome-atleta">Nome completo do atleta (obrigatorio)</label>
-                <input type="text" id="nome-atleta" name="nome atleta" required><br>
-            
-                <label for="nome da equipe">nome completo da equipe</label>
-                <input type="text" id="nome da equipe" 
-            
-            
+                <input type="text" id="nome-atleta" name="nome-atleta" required>
+                <br>
+
+                <label for="matricula">matricula (obrigatorio)</label>
+                <input type="text" id="matricula" name="matricula" required>
+                <br>
+
+                <label for="data de nascimento">data de nascimento</label>
+                <input type="date" id="data de nascimento" name="data_de_nascimento" required>
+                <br>
+
+                <label for="E-mail de contato">E-mail de contato (obrigatorio)</label>
+                <input type="email" id="E-mail-de-contato (obrigatorio)" name="E-mail-de-contato" required>
+                <br>
+
+                <label for="telefone">telefone</label>
+                <input type="tel" id="telefone" name="contato_do_atleta" required>
+                <br>
+
+
+                <label for="site do evento">site do evento</label>
+                <input type="email" id="site-do-evento" name="email-do-evento" placeholder="exemle@evento" required>
+                <br>
         </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>2. Escola e delegação</legend>
+
+            <label for="Escola">Escola de origem</label>
+            <input type="search" id="Escola" name="Escola" value="Escola sal" list="Escolas">
+
+            <datalist id="Escolas">
+                <option value="Escola horizonte"></option>
+                <option value="Escola sal"></option>
+                <option value="Escola vinagre negroo"></option>
+            </datalist>
+            <br>
+
+            <label for="Turma">Turma</label>
+            <select id="Turma" name="turma" required>
+                <option value="1 ano">1 ano</option>
+                <option value="2 ano">2 ano</option>
+                <option value="3 ano">3 ano</option>
+                <br>
+            </select>
+            <br>
+
+            <label for="nome-da-equipe">Nome da equipe</label>
+            <input type="search" id="nome-da-equipe" name="equipe" list="equipes">
+
+            <datalist id="equipes">
+                <option value="Flamengo">Flamengo</option>
+                <option value="Corinthias">Corinthias</option>
+                <option value="Varmeiras">Varmeiras</option>
+            </datalist>
+            <br>
+
+            <label for="Professor-responsavel">Professor responsável</label>
+            <input type="text" id="Professor-reponsavel" name="Professor responsavel">
+            <br>
+
+            <label for="Telefone-do-professor">Telefone do professor</label>
+            <input type="tel" id="Telefone-do-professor" name="telefone do professsor">
+            <br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>3. Participação nos jogos</legend>
+
+            <label for="Modalidade-principal">Modalidade principal (obrigatória)</label>
+            <select id="Modalidade-principal">
+                <option value="">selecione uma modalidade</option>
+                <option value="Futsal">Futsal</option>
+                <option value="Volei">Volei</option>
+                <option value="Natação">Natação</option>
+            </select>
+            <fieldset>
+                <legend>Turno de preferencia</legend>
+                <input type="radio" id="turno-manhã" name="turno">
+                <label for="turno-manhã">Manhã</label>
+
+                <input type="radio" id="turno-tarde" name="turno">
+                <label for="turno-tarde">Tarde</label>
+
+                <input type="radio" id="turno-noite" name="turno">
+                <label for="turno-noite">Noite</label>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Modalidades de interesse(permite várias escolhas)</legend>
+                <input type="checkbox" id="interesse-futsal" name="modalidades" value="futsal">
+                <label for="interesse-futsal">Futsal</label>
+
+                <input type="checkbox" id="interesse-volei" name="modalidades" value="Volei">
+                <label for="interesse-volei">Volei</label>
+
+                <input type="checkbox" id="interesse-carinbada" name="modalidades" value="Carinbada">
+                <label for="interesse-carinbada">Carinbada</label>
+
+                <input type="checkbox" id="interesse-xadrez" name="modalidades" value="Xadrez">
+                <label for="interesse-xadrez">Xadrez</label>
+
+                <input type="checkbox" id="interresse-corrida" name="modalidades" value="Corrida">
+                <label for="interresse-corrida">Corrida</label>
+            </fieldset>
+            <br>
+            Tamanho da camiseta
+            <select id="tamanho-da-camiseta" name="camisa">
+                <option value="">selecione um tamanho</option>
+                <option value="p">P</option>
+                <option value="m">M</option>
+                <option value="g">G</option>
+            </select>
+            <br>
+            <fieldset>
+                <legend>Participação em atividades complementares</legend>
+                <input type="checkbox" id="cerimonia-de-abertura" name="atv complementares"
+                    Value="cerimonia-de-abertura">
+                <label for="cerimonia-de-abertura">Cerimônia de abertura</label>
+                <br>
+
+                <input type="checkbox" id="oficina-de-arbitragem" name="atv complementares"
+                    value="oficina-de-arbitragem">
+                <label for="oficina-de-arbitragem">Oficina de arbitragem</label>
+                <br>
+
+                <input type="checkbox" id="organizaça-das-equipes" name="atv complementares"
+                    value="organizaçao das equipes">
+                <label for="organizaça-das-equipes">Organização das equipes</label>
+
+            </fieldset>
+
+            <label for="acompanhantes">Quantidade de acompanhantes</label>
+            <input type="number" id="acompanhantes" name="numero de acompanhantes" value="2">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>4. Preparação e disponibilidade</legend>
+            <label for="mes">Mes de início da Preparação</label>
+            <input type="month" id="mes" name="mes de inicio">
+        </fieldset>
+
+
+
 
         </form>
 
